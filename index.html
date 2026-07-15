@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="함께 배우고 성장하는 우리 반과 여섯 개 모둠을 소개하는 인터랙티브 홈페이지입니다."
+  >
+
+  <title>Our Class — 함께 성장하는 우리</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <div class="site-wrap">
+
+    <!-- 고정 헤더 -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a href="#hero" class="brand" aria-label="첫 화면으로 이동">
+          Our Class
+        </a>
+
+        <nav class="desktop-nav" aria-label="주요 메뉴">
+          <a href="#hero">Home</a>
+          <a href="#story">About</a>
+          <a href="#teams">Teams</a>
+          <a href="#footer">Contact</a>
+        </nav>
+
+        <a href="#teams" class="button button-small desktop-cta">
+          Meet our teams
+        </a>
+
+        <button
+          type="button"
+          class="menu-button"
+          id="menuButton"
+          aria-label="모바일 메뉴 열기"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 모바일 오버레이 -->
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+
+    <!-- 모바일 메뉴 -->
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu-nav" aria-label="모바일 메뉴">
+        <a href="#hero" style="--menu-index: 0">Home</a>
+        <a href="#story" style="--menu-index: 1">About our class</a>
+        <a href="#teams" style="--menu-index: 2">Meet the teams</a>
+        <a href="#footer" style="--menu-index: 3">Contact</a>
+      </nav>
+
+      <a href="#teams" class="button mobile-menu-button">
+        모둠 소개 보기
+      </a>
+    </aside>
+
+    <main>
+      <!-- SECTION 1 : HERO -->
+      <section class="hero-section" id="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster=""
+        >
+          <source
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260613_180732_a54afbf6-b30d-470e-861f-669871f09f67.mp4"
+            type="video/mp4"
+          >
+        </video>
+
+        <div class="hero-fallback" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="hero-kicker reveal-hero">
+            GREEN COMPUTER ACADEMY
+          </p>
+
+          <h1 class="hero-title text-glow reveal-hero">
+            Different ideas.<br>
+            One growing class.
+          </h1>
+
+          <p class="hero-description reveal-hero">
+            디자인과 개발을 배우며 서로의 생각을 나누고,
+            함께 새로운 결과물을 만들어가는 우리 반을 소개합니다.
+          </p>
+
+          <a href="#story" class="button reveal-hero">
+            Begin our story
+          </a>
+        </div>
+
+        <div class="sound-indicator" aria-hidden="true">
+          <div class="sound-circle">
+            <span></span>
+          </div>
+          <p>
+            Experience<br>
+            with sound
+          </p>
+        </div>
+
+        <a href="#story" class="scroll-indicator" aria-label="다음 섹션으로 이동">
+          <span>SCROLL</span>
+          <i></i>
+        </a>
+      </section>
+
+      <!-- SECTION 2 : CLASS STORY -->
+      <section class="story-section" id="story">
+        <div class="story-gradient" aria-hidden="true"></div>
+
+        <img
+          class="rainbow-layer"
+          id="rainbowLayer"
+          src="https://soft-zoom-63098134.figma.site/_assets/v11/8d520a7515d06cbfc403d0125e3d05b1a7ccd29c.png"
+          alt=""
+        >
+
+        <img
+          class="cloud-layer cloud-left"
+          id="cloudLeft"
+          src="https://soft-zoom-63098134.figma.site/_assets/v11/0d6dfd3f90b930f21726f2ed56a3320d79b7a797.png"
+          alt=""
+        >
+
+        <img
+          class="cloud-layer cloud-right"
+          id="cloudRight"
+          src="https://soft-zoom-63098134.figma.site/_assets/v11/0d6dfd3f90b930f21726f2ed56a3320d79b7a797.png"
+          alt=""
+        >
+
+        <div class="story-content">
+          <p class="story-label">ABOUT OUR CLASS</p>
+
+          <blockquote class="story-quote">
+            우리 반은 디자인을 고민하고 하나의 목표를 향해
+            함께 움직입니다.
+          </blockquote>
+
+          <p class="story-author">
+            Green Computer Academy · 13th Class
+          </p>
+
+          <div class="team-links" id="teams" aria-label="모둠 소개 페이지">
+            <a href="./team1/index.html" class="liquid-glass">Team 01</a>
+            <a href="./team2/index.html" class="liquid-glass">Team 02</a>
+            <a href="./team3/index.html" class="liquid-glass">Team 03</a>
+            <a href="./team4/index.html" class="liquid-glass">Team 04</a>
+            <a href="./team5/index.html" class="liquid-glass">Team 05</a>
+            <a href="./team6/index.html" class="liquid-glass">Team 06</a>
+          </div>
+
+          <p class="team-note">
+            현재 압축파일에는 모둠 폴더가 포함되어 있지 않습니다.
+            추후 team1부터 team6 폴더를 추가하면 연결됩니다.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <p>© 2026 Our Class Project</p>
+      <a href="#hero">Back to top</a>
+    </footer>
+  </div>
+</body>
+</html>
