@@ -1,0 +1,25 @@
+/* Team 01 individual theme
+   이 파일에서 팀 컬러와 팀별 세부 디자인을 수정하세요. */
+
+.team1-page {
+  --team-accent: #8f85ff;
+  --team-accent-soft: #d8d4ff;
+  --team-deep: #17112f;
+
+  /* 배경 이미지 사용 예시:
+     1. images 폴더에 hero.jpg를 넣습니다.
+     2. 아래 주석을 해제합니다.
+     --team-hero-image: url("../images/hero.jpg");
+  */
+}
+
+/* 팀별로 원하는 스타일을 아래에 추가하세요. */
+/*
+.team1-page .team-hero-title {
+  font-style: italic;
+}
+
+.team1-page .member-card {
+  border-radius: 8px;
+}
+*/

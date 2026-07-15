@@ -1,0 +1,11 @@
+Team 01 이미지 폴더
+
+권장 파일명 예시
+- hero.jpg
+- member1.jpg
+- member2.jpg
+- member3.jpg
+- member4.jpg
+
+프로필 이미지 권장 비율: 세로 4:5
+히어로 이미지 권장 크기: 가로 1920px 이상
