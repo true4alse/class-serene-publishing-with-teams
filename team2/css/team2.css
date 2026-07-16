@@ -9,8 +9,8 @@
   /* 배경 이미지 사용 예시:
      1. images 폴더에 hero.jpg를 넣습니다.
      2. 아래 주석을 해제합니다.
-     --team-hero-image: url("../images/hero.jpg");
-  */
+     --team-hero-image: url("./../video/IMG_3551.mov");
+ */
 }
 
 /* 팀별로 원하는 스타일을 아래에 추가하세요. */
@@ -23,3 +23,35 @@
   border-radius: 8px;
 }
 */
+
+.team-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.45);
+}
+
+.team-hero .team-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.team-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.team-hero .team-inner {
+  z-index: 2;
+}
