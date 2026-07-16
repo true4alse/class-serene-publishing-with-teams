@@ -36,7 +36,7 @@ h2{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.1);
+    filter: brightness(0.3);
 }
 
 .team3-page .team-hero::before {
