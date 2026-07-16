@@ -141,3 +141,31 @@ heroVideo.addEventListener("error", () => {
 heroVideo.play().catch(() => {
   /* 자동 재생 정책으로 실행되지 않아도 CSS 배경은 유지됩니다. */
 });
+
+/* 모둠활동 섹션 영상 및 스크롤 등장 효과 */
+const activitySection = document.getElementById("activity");
+const activityVideo = document.querySelector(".activity-video");
+
+if (activitySection) {
+  const activityObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        activitySection.classList.add("is-visible");
+        activityObserver.disconnect();
+      }
+    },
+    { threshold: 0.25 }
+  );
+
+  activityObserver.observe(activitySection);
+}
+
+if (activityVideo) {
+  activityVideo.addEventListener("error", () => {
+    activityVideo.style.display = "none";
+  });
+
+  activityVideo.play().catch(() => {
+    /* 영상 자동 재생이 차단되어도 대체 배경은 유지됩니다. */
+  });
+}
