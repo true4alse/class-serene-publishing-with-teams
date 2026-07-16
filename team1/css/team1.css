@@ -13,6 +13,35 @@
   */
 }
 
+/* Hero background video: keep the content above a subtly darkened video. */
+.team1-page .team-hero {
+  background: #17112f;
+}
+
+.team1-page .team-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team1-page .team-hero::before {
+  z-index: 1;
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 7, 13, 0.88) 100%
+  );
+  mask-image: none;
+}
+
+.team1-page .team-hero .team-inner {
+  position: relative;
+  z-index: 2;
+}
+
 /* 팀별로 원하는 스타일을 아래에 추가하세요. */
 /*
 .team1-page .team-hero-title {
