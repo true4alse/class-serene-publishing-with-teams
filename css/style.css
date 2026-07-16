@@ -529,32 +529,33 @@ body.menu-open {
 }
 
 .team-links {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 48px;
 }
 
 .liquid-glass {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.01);
-  background-blend-mode: luminosity;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition:
-    background-color 0.3s ease,
+    padding: 0.7rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease,
     transform 0.3s ease;
+    flex-direction: column;
 }
 
 .liquid-glass::before {
@@ -724,6 +725,11 @@ body.menu-open {
 
 .footer a {
   color: rgba(255, 255, 255, 0.82);
+}
+
+.blsp {
+    display: block;
+    font-size: 1.6rem;
 }
 
 /* Animations */
