@@ -13,9 +13,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
   >
 
   <link rel="stylesheet" href="./css/reset.css">
@@ -185,6 +190,46 @@
             추후 team1부터 team6 폴더를 추가하면 연결됩니다.
           </p>
         </div>
+      </section>
+
+      <!-- SECTION 3 : GROUP ACTIVITY -->
+      <section class="activity-section" id="activity" aria-labelledby="activityTitle">
+        <video
+          class="activity-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="./video/team-activity.mp4" type="video/mp4">
+        </video>
+
+        <div class="activity-fallback" aria-hidden="true"></div>
+        <div class="activity-overlay" aria-hidden="true"></div>
+
+        <div class="activity-content">
+          <p class="activity-eyebrow">TOGETHER, WE MAKE IT BETTER</p>
+          <h2 class="activity-title" id="activityTitle">
+            신나는<br>
+            <em>모둠활동 시간</em>
+          </h2>
+          <p class="activity-description">
+            서로 다른 아이디어가 만나 더 멋진 결과가 되는 시간.<br>
+            함께 이야기하고, 웃고, 직접 만들며 우리만의 답을 찾아갑니다.
+          </p>
+
+          <div class="activity-meta" aria-label="모둠활동의 가치">
+            <span>Share</span>
+            <i aria-hidden="true"></i>
+            <span>Create</span>
+            <i aria-hidden="true"></i>
+            <span>Grow</span>
+          </div>
+        </div>
+
+        <p class="activity-side-note" aria-hidden="true">OUR CLASS · GROUP ACTIVITY</p>
       </section>
     </main>
 
