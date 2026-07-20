@@ -1,4 +1,4 @@
-/* Team 02 individual theme
+/* Team 01 individual theme
    이 파일에서 팀 컬러와 팀별 세부 디자인을 수정하세요. */
 
 .team1-page {
@@ -9,53 +9,9 @@
   /* 배경 이미지 사용 예시:
      1. images 폴더에 hero.jpg를 넣습니다.
      2. 아래 주석을 해제합니다.
-     --team-hero-image: url("./../video/IMG_3551.mov");
- */
+     --team-hero-image: url("../images/hero.jpg");
+  */
 }
-
-/* 팀별로 원하는 스타일을 아래에 추가하세요. */
-/*
-.team1-page .team-hero-title {
-  font-style: italic;
-}
-
-.team1-page .member-card {
-  border-radius: 8px;
-}
-*/
-
-.team-hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.team-hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  filter: brightness(0.45);
-}
-
-.team-hero .team-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.team-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-}
-
-.team-hero .team-inner {
-  z-index: 2;
-}
-
 
 /* Member resume */
 .member-resume-page { background: #f1f0f7; }
@@ -116,3 +72,10 @@
   border-radius: 8px;
 }
 */
+
+
+/* 팀 멤버 소개 페이지 이미지 비율 조정 */
+.resume-portrait img {
+  object-fit: cover;
+  height: 100%;
+}
