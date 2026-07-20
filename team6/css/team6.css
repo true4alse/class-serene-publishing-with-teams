@@ -121,3 +121,86 @@
   object-fit: cover;
   height: 100%;
 }
+
+.team-page .member-resume-link:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.32);
+    transform: translateY(-2px);
+}
+.team-page .member-card .member-resume-link {
+    margin-top: 22px;
+}
+.team-page .member-resume-link {
+    display: inline-flex
+;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: transform 0.25s 
+ease, background-color 0.25s 
+ease, border-color 0.25s 
+ease;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.team-page .member-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+.team-page .members-section {
+    color: #ffffff;
+    background: #111119;
+}
+.team1-page {
+    --team-accent: #8f85ff;
+    --team-accent-soft: #d8d4ff;
+    --team-deep: #17112f;
+}
+.team-page {
+    --team-accent: #8f85ff;
+    --team-accent-soft: #d8d4ff;
+    --team-deep: #151128;
+    --team-hero-image: none;
+    min-width: 280px;
+    color: #181820;
+    background: #f7f7fa;
+    font-family: "Inter", sans-serif;
+}
+body {
+    overflow-x: hidden;
+    color: var(--white);
+    background: var(--dark);
+    font-family: "Pretendard", "Inter", sans-serif;
+}
+:root {
+    --dark: #0a0608;
+    --white: #ffffff;
+    --header-height: 80px;
+    --page-padding: clamp(20px, 4vw, 64px);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
