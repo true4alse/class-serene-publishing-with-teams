@@ -50,6 +50,52 @@ document.addEventListener("keydown", (event) => {
 window.addEventListener("scroll", updateTeamHeader, { passive: true });
 updateTeamHeader();
 
+const figmaResumeEmbeds = document.querySelectorAll(".figma-resume-embed");
+
+figmaResumeEmbeds.forEach((embed, index) => {
+  const iframe = embed.querySelector("iframe");
+  if (!iframe) return;
+
+  const panel = document.createElement("div");
+  const panelInner = document.createElement("div");
+  const button = document.createElement("button");
+  const panelId = `figma-resume-panel-${index + 1}`;
+
+  panel.className = "figma-resume-panel";
+  panel.id = panelId;
+  panel.setAttribute("aria-hidden", "true");
+  panelInner.className = "figma-resume-panel-inner";
+
+  button.type = "button";
+  button.className = "figma-resume-toggle";
+  button.setAttribute("aria-controls", panelId);
+  button.setAttribute("aria-expanded", "false");
+  button.innerHTML = `
+    <span class="figma-resume-toggle-label">이력서 펼쳐보기</span>
+    <span class="figma-resume-toggle-icon" aria-hidden="true"></span>
+  `;
+
+  const iframeParent = iframe.parentNode;
+
+  iframeParent.insertBefore(panel, iframe);
+  panel.appendChild(panelInner);
+  panelInner.appendChild(iframe);
+  iframeParent.insertBefore(button, panel);
+
+  button.addEventListener("click", () => {
+    const isOpen = embed.classList.toggle("is-figma-open");
+
+    button.setAttribute("aria-expanded", String(isOpen));
+    button.querySelector(".figma-resume-toggle-label").textContent = isOpen
+      ? "이력서 접기"
+      : "이력서 펼쳐보기";
+    panel.setAttribute("aria-hidden", String(!isOpen));
+    iframe.setAttribute("tabindex", isOpen ? "0" : "-1");
+  });
+
+  iframe.setAttribute("tabindex", "-1");
+});
+
 const revealTargets = document.querySelectorAll(".team-reveal");
 
 if ("IntersectionObserver" in window) {

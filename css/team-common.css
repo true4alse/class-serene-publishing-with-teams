@@ -850,3 +850,89 @@
     transform: none;
   }
 }
+
+/* Figma resume accordion */
+.member-resume-page .figma-resume-toggle {
+  display: flex;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 22px;
+  border: 1px solid rgba(23, 17, 47, 0.14);
+  border-radius: 18px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--team-deep, #17112f);
+  background: rgba(255, 255, 255, 0.78);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.member-resume-page .figma-resume-toggle:hover {
+  border-color: var(--team-accent, #7569e8);
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+.member-resume-page .figma-resume-toggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--team-accent, #7569e8) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.member-resume-page .figma-resume-toggle-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.member-resume-page .figma-resume-toggle-icon::before,
+.member-resume-page .figma-resume-toggle-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: 2px;
+  content: "";
+  background: currentColor;
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease;
+}
+
+.member-resume-page .figma-resume-toggle-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.member-resume-page .is-figma-open .figma-resume-toggle-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.member-resume-page .figma-resume-panel {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.45s ease, opacity 0.3s ease, margin-top 0.45s ease;
+}
+
+.member-resume-page .figma-resume-panel-inner {
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.member-resume-page .is-figma-open .figma-resume-panel {
+  grid-template-rows: 1fr;
+  margin-top: 14px;
+  opacity: 1;
+}
+
+@media (max-width: 560px) {
+  .member-resume-page .figma-resume-toggle {
+    min-height: 54px;
+    padding: 0 18px;
+  }
+}
