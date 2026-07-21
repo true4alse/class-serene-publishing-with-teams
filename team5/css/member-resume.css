@@ -79,3 +79,32 @@
   object-fit: cover;
   height: 100%;
 }
+
+
+  .resume-hero {
+    position: relative;
+    display: flex
+;
+    align-items: flex-end;
+    min-height: 78vh;
+    min-height: 78svh;
+    overflow: hidden;
+    padding: 150px 0 80px;
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(7, 7, 13, 0.84) 0%, rgba(7, 7, 13, 0.42) 58%, rgba(7, 7, 13, 0.18) 100%), var(--team-hero-image), linear-gradient(135deg, var(--team-deep), var(--team-accent));
+    background-position: center;
+    background-size: cover;
+    isolation: isolate;
+  }
+  .resume-hero video {
+  position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) saturate(0.72) blur(2px);
+    transform: scale(1.035);
+    pointer-events: none;
+  }
