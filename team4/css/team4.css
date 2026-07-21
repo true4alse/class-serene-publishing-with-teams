@@ -58,8 +58,10 @@
 
 /* Member resume */
 .member-resume-page { background: #f1f0f7; }
-.member-resume-page .resume-hero { display: flex; align-items: flex-end; min-height: 88svh; padding: 150px 0 90px; color: #fff; background: radial-gradient(circle at 78% 24%, rgba(143,133,255,.58), transparent 30%), linear-gradient(135deg, #100c23 0%, #28204f 62%, #6f66d8 100%); }
-.member-resume-page .resume-hero-inner { position: relative; }
+.member-resume-page .resume-hero { position: relative; display: flex; align-items: flex-end; min-height: 88svh; padding: 150px 0 90px; overflow: hidden; color: #fff; background: radial-gradient(circle at 78% 24%, rgba(143,133,255,.58), transparent 30%), linear-gradient(135deg, #100c23 0%, #28204f 62%, #6f66d8 100%); }
+.member-resume-page .resume-hero > figure.video { position: absolute; inset: 0; height: 100%; margin: 0; }
+.member-resume-page .resume-hero .team-hero-video { width: 100%; height: 100%; object-fit: cover; }
+.member-resume-page .resume-hero-inner { position: relative; z-index: 1; }
 .member-resume-page .resume-hero h1 { max-width: 900px; font-family: "Instrument Serif", serif; font-size: clamp(68px, 11vw, 148px); font-weight: 400; line-height: .83; letter-spacing: -.055em; }
 .member-resume-page .resume-hero h1 em { color: #d8d4ff; }
 .member-resume-page .resume-hero-inner > p:not(.team-eyebrow) { max-width: 570px; margin-top: 32px; color: rgba(255,255,255,.68); line-height: 1.8; }
